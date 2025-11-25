@@ -7,7 +7,7 @@ public class Primenot {
                 return false;
             }
         }
-        return true;  // <-- Missing in your code
+        return true;  
     }
 
     public static void main(String[] args) {
