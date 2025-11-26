@@ -11,6 +11,6 @@ public class Primenot {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPrime(12)); // false
+        System.out.println(isPrime(10)); // false
     }
 }

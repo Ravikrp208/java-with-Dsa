@@ -1,5 +1,4 @@
 public class rangeprime {
-
        public static boolean isPrime(int n){
         if(n==2){
             return true;
@@ -17,10 +16,10 @@ public class rangeprime {
                 System.out.print(i +" ");
             }
             
+            
         }
     }
  public static void main(String[] args) {
-    PrimeInRange(20);
-     
+    PrimeInRange(20); 
  }
 }
