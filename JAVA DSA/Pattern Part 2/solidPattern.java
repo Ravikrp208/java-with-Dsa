@@ -11,6 +11,7 @@ public class solidPattern {
             System.out.println();
         }
         
+        
     }
     public static void main(String[] args) {
         solid_rhombus(5);
