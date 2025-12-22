@@ -7,7 +7,7 @@ public class solidHollo {
                 System.out.print(" ");
              }
 
-             //holl reactangle - star
+             //holl rectangle - star
              for(int j=1; j<=n; j++){
                 if(i == 1|| i == n || j== 1 || j== n){
                     System.out.print("*");

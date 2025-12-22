@@ -5,7 +5,7 @@ public class solidPattern {
                 System.out.print(" ");
             }
             // star
-            for(int j=1; j<=n; j++){
+             for(int j=1; j<=n; j++){
                 System.out.print("*");
             }
             System.out.println();
