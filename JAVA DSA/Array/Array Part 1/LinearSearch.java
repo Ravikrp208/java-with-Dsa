@@ -1,3 +1,5 @@
+// package JAVA DSA.Array.Array Part 1;
+
 // package JAVA DSA.Array with liner search ;
 
 public class LinearSearch {
