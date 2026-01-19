@@ -11,6 +11,6 @@ public class prime {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPrime(12)); // false
+        System.out.println(isPrime(4)); // false
     }
 }

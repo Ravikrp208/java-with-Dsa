@@ -20,6 +20,6 @@ public class rangeprime {
         }
     }
  public static void main(String[] args) {
-    PrimeInRange(20); 
+    PrimeInRange(100); 
  }
 }
