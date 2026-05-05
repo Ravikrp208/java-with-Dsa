@@ -1,4 +1,8 @@
 // package JAVA DSA.Loop condition.while-Loop_Question;
+/* Accept a value and find the factorial value 
+   n = n* n-1
+     = n*(n-1) *n-1
+*/
 
 import java.util.Scanner;
 
