@@ -1,0 +1,2 @@
+write a program to dipaly a table in java using while loop
+write a program to dipaly a factorial no using while loop
