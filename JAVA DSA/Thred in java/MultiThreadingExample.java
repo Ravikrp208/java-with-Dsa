@@ -1,5 +1,3 @@
-package demo;
-
 public class MultiThreadingExample {
 
     private final String name;

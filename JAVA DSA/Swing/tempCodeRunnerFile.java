@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class mywindow {
+public class tempCodeRunnerFile {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("My First Window");
