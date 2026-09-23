@@ -15,4 +15,4 @@ class Calculator {
         System.out.println(obj.add(10, 20));
         System.out.println(obj.add(10, 20, 30));
     }
-}
+}   
