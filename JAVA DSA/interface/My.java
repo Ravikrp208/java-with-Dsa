@@ -17,8 +17,7 @@ class AnotherClass implements MyInterface {
 }
 
 public class My {
-
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
         MyClass obj = new MyClass();
         obj.myMethod();
