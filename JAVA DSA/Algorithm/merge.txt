@@ -1,0 +1,162 @@
+Merge Sort — Full Explanation:- 
+
+1. What is Merge Sort?
+
+Merge Sort is a sorting algorithm based on the Divide and Conquer technique.
+
+It divides the array into smaller parts, sorts those parts, and then merges them to get the final sorted array.
+
+Main idea:
+Divide → Sort → Merge
+2. How Merge Sort Works
+
+Suppose we have:
+
+[8, 3, 5, 2, 7, 1, 6, 4]
+Step 1: Divide
+
+Divide the array into two halves:
+
+[8, 3, 5, 2]    [7, 1, 6, 4]
+
+Again divide:
+
+[8, 3] [5, 2]    [7, 1] [6, 4]
+
+Again:
+
+[8] [3] [5] [2] [7] [1] [6] [4]
+
+Now every part has one element.
+
+3. Merge the Elements
+
+Now we start combining and sorting.
+
+[8] + [3] → [3, 8]
+
+[5] + [2] → [2, 5]
+
+[7] + [1] → [1, 7]
+
+[6] + [4] → [4, 6]
+
+Next:
+
+[3, 8] + [2, 5]
+        ↓
+[2, 3, 5, 8]
+
+And:
+
+[1, 7] + [4, 6]
+        ↓
+[1, 4, 6, 7]
+
+Finally:
+
+[2, 3, 5, 8] + [1, 4, 6, 7]
+              ↓
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+So the final sorted array is:
+
+[1, 2, 3, 4, 5, 6, 7, 8]
+4. Merge Sort Algorithm
+Merge Sort
+MERGE_SORT(A, low, high)
+
+1. If low < high
+2.     mid = (low + high) / 2
+3.     MERGE_SORT(A, low, mid)
+4.     MERGE_SORT(A, mid + 1, high)
+5.     MERGE(A, low, mid, high)
+
+The MERGE() function combines two already sorted portions.
+
+5. Simple JavaScript Code
+function mergeSort(arr) {
+    if (arr.length <= 1) {
+        return arr;
+    }
+
+    let mid = Math.floor(arr.length / 2);
+
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+
+    return merge(left, right);
+}
+
+function merge(left, right) {
+    let result = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < left.length && j < right.length) {
+        if (left[i] < right[j]) {
+            result.push(left[i]);
+            i++;
+        } else {
+            result.push(right[j]);
+            j++;
+        }
+    }
+
+    return result.concat(left.slice(i), right.slice(j));
+}
+
+let arr = [8, 3, 5, 2, 7, 1, 6, 4];
+
+console.log(mergeSort(arr));
+Output:
+[1, 2, 3, 4, 5, 6, 7, 8]
+6. Why is Merge Sort called Divide and Conquer?
+
+Because it performs three steps:
+
+Divide
+
+Break the array into smaller subarrays.
+
+Conquer
+
+Recursively sort each subarray.
+
+Combine
+
+Merge the sorted subarrays.
+
+Divide
+   ↓
+Conquer
+   ↓
+Combine
+7. Time Complexity ⭐
+
+Merge Sort has:
+
+Case	Complexity
+Best Case	O(n log n)
+Average Case	O(n log n)
+Worst Case	O(n log n)
+
+So, the important point is:
+
+Merge Sort always takes O(n log n) time.
+
+8. Space Complexity
+
+Merge Sort generally requires extra memory for merging.
+
+Space Complexity = O(n)
+9. Advantages
+Time complexity is O(n log n).
+Works well for large datasets.
+Performance is predictable.
+It is a stable sorting algorithm.
+Good for sorting linked lists and external data.
+10. Disadvantages
+Requires extra memory O(n).
+Usually slower than Quick Sort for some in-memory practical cases because of extra copying.
+Implementation is more complex than simple sorting algorithms like Bubble Sort.
